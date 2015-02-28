@@ -19,6 +19,7 @@ def replyRandomTTL(packet):
     #send()
     #replyPacket = eval(packet[1].command())
     if packet[ICMP].type == 8:
+
         replyPacket = eval(packet[1].command())
         #replyPacket = packet
         replyPacket[IP].src = originalIPDst
