@@ -49,10 +49,6 @@ def dhcp_discover(pkt):
 # Server need to respond to "Discover" & "Request" msg
 def dhcp_manipulate(pkt):
     global LegitDHCPServer,splittedIPv4,rougeServer,maxNAKReply
-    #print "\n##############################"
-    #print "Source: " +pkt[Ether].src
-    #print "Dest: " +pkt[Ether].dst
-    #pkt.show()
     tempOptions = {}
     for opt in pkt[DHCP].options:
         if opt == 'end':
